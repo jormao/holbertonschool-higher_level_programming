@@ -18,10 +18,10 @@ int check_cycle(listint_t *list)
 
 	while (rabbit && rabbit->next)
 	{
-		if (turtle == rabbit)
-			return (1);
 		turtle = turtle->next;
 		rabbit = rabbit->next->next;
+		if (turtle == rabbit)
+			return (1);
 	}
 	return (0);
 }
