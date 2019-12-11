@@ -27,9 +27,9 @@ listint_t *insert_node(listint_t **head, int number)
 		return (new_node);
 	}
 
-	while (copy_head)
+	while (copy_head ->next)
 	{
-		if (copy_head->n <= number && (number <= copy_head->next->n || copy_head->next == NULL))
+		if (copy_head->n <= number && number <= copy_head->next->n)
 			{
 				new_node->next = copy_head->next;
 				copy_head->next = new_node;
@@ -37,5 +37,7 @@ listint_t *insert_node(listint_t **head, int number)
 			}
 		copy_head = copy_head->next;
 	}
+	new_node->next = copy_head->next;
+	copy_head->next = new_node;
 	return(new_node);
 }
