@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 def magic_calculation(a, b):
     from magic_calcularion_102 import add, sub
     if a < b:
