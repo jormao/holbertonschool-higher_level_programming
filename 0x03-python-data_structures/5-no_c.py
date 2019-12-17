@@ -1,12 +1,7 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    count = 0
-    if my_string:
-        for i in my_string:
-            count += 1
-            if i == 'c' or i == 'C':
-                new_string = my_string[:count - 1] + my_string[count:]
-                my_string = new_string
-                count -= 1
-        return (new_string)
-    return (my_string)
+    new_str =""
+    for i in my_string:
+        if i != 'c' and i != 'C':
+            new_str = new_str + i
+    return (new_str)        
