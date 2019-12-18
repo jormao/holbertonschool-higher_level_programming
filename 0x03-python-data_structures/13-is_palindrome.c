@@ -15,7 +15,9 @@ int is_palindrome(listint_t **head)
 	int count = 0, rev = 0, adv = 0;
 	char str_new[100];
 
-	if (current == NULL)
+	if (head == NULL)
+		return (0);
+	if (*head == NULL)
 		return (1);
 	while (current)
 	{
