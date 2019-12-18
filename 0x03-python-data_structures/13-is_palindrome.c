@@ -11,9 +11,8 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *current = *head;
-	int count = 0, rev = 0, adv = 0;
-	char str_new[100];
+	listint_t *current = *head, *new_current = *head;
+	unsigned int count = 0, cycle = 0, i = 0, len = 0;
 
 	if (head == NULL)
 		return (0);
@@ -22,21 +21,17 @@ int is_palindrome(listint_t **head)
 	while (current)
 	{
 		count++;
-		str_new[count - 1] = current->n;
 		current = current->next;
 	}
-	rev = (count / 2) - 1;
-	if (count % 2 == 0)
-		adv = (count / 2);
-	else
-		adv = (count / 2) + 1;
-	while (rev >= 0)
+	current = *head;
+	cycle = count * 2;
+	len = cycle - 2;
+
+	for (i = 0; i < cycle; i = i + 2)
 	{
-		if (str_new[rev] != str_new[adv])
+		if (current[i].n != new_current[len].n)
 			return (0);
-		rev--;
-		adv++;
+		len = len - 2;
 	}
-	free(current);
 	return (1);
 }
