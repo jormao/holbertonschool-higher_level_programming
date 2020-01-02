@@ -40,10 +40,11 @@ Your code should use the PEP 8 style (version 1.7.*)
 All your files must be executable
 The length of your files will be tested using wc
 
-|TASKS-----------------------|DESCRIPTION------------------------------------------------------------------|
-|0-add.py                    |program that imports the function def add(a, b): from the file add_0.py      |
-|1-calculation.py------------|program that imports functions from the file calculator_1.py                 |
-|2-args.py                   |program that prints the number of and the list of its arguments.             |
-|3-infinite_add.py           |program that prints the result of the addition of all arguments              |
-|4-hidden_discovery.py       |program that prints all the names defined by the compiled module hidden_4.pyc|
-|5-variable_load.py          |program that imports the variable a from the file variable_load_5.py         |
+| TASKS | DESCRIPTION |
+|----------------------- | -------------------------|
+|0-add.py | program that imports the function def add(a, b): from the file add_0.py |
+|1-calculation.py | program that imports functions from the file calculator_1.py |
+|2-args.py | program that prints the number of and the list of its arguments. |
+|3-infinite_add.py | program that prints the result of the addition of all arguments |
+|4-hidden_discovery.py | program that prints all the names defined by the compiled module hidden_4.pyc|
+|5-variable_load.py | program that imports the variable a from the file variable_load_5.py |
