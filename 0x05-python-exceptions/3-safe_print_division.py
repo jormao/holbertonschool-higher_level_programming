@@ -7,7 +7,7 @@ def safe_print_division(a, b):
     except ZeroDivisionError:
         x = 0
     finally:
-        if x == 1:        
+        if x == 1:
             print("Inside result: {:.1f}".format(result))
             return (result)
         else:
