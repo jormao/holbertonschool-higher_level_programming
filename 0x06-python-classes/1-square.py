@@ -3,6 +3,8 @@
 """
 0-square.py: is an empty class Square that defines a square:
 """
+
+
 class Square(size):
     """class Square that defines a square
 
@@ -11,7 +13,6 @@ class Square(size):
         attr2 (:obj:`int`, optional): Description of `attr2`.
 
     """
-    pass
 
     def __init__(self, size):
         """Initializer with default radius of 1.0"""
