@@ -5,7 +5,7 @@
 """
 
 
-class Square(size):
+class Square:
     """class Square that defines a square
 
     Attributes:
@@ -14,10 +14,10 @@ class Square(size):
 
     """
 
-    def __init__(self, size):
+    def __init__(self, _Square__size):
         """Initializer with default radius of 1.0"""
-        self.size = size  # Create an instance variable radius
+        self._Square__size = _Square__size
 
-    def get_size(self):
+    def get_size(_Square__size):
         """Return the size of this Square"""
-        return self.size
+        return self._Square__size
