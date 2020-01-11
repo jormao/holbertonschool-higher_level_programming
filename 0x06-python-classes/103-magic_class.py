@@ -1,16 +1,17 @@
 #!/usr/bin/python3
-
+import dis
 
 
 
 
 
 class MagicClass:
-    def __init__(self):
+    def __init__(self, radius=0):
         self.__radius = 0
         if type(radius) is not int or type(radius) is not float:
             raise TypeError('radius must be a number')
-            self.__radius = radius
+        self.__radius = radius
+
 
     def area(self, radius):
         return (self.__radius ** 2 *math.pi)
@@ -18,4 +19,4 @@ class MagicClass:
 
     def circumference(self, radius):
         return (2 * math.pi * self.__radius)
-        
+print(dis.dis(MagicClass))
