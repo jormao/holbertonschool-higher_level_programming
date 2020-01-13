@@ -1,11 +1,26 @@
-Task 2
+===============================
+2. Say my name
+===============================
+Import module:
+==============
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Function:
+=========
+Write a function that prints My name is <first name> <last name>
+
+Operations:
+===========
+ * first_name and last_name must be strings otherwise, 
+    raise a TypeError exception with the message first_name 
+	must be a string or last_name must be a string
 
 Section // Non-Parameters
 =========================
 Test case #0: A test case without parameters
-    >>> say_my_name()
-    Traceback (most recent call last):
-    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+	>>> say_my_name()
+	Traceback (most recent call last):
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
 >>> say_my_name("John", "Smith")
 My name is John Smith
@@ -14,7 +29,7 @@ My name is John Smith
 My name is Walter White
 
 >>> say_my_name("Bob")
-My name is Bob<space>
+My name is Bob 
 
 >>> say_my_name(3)
 Traceback (most recent call last):
@@ -29,19 +44,19 @@ Traceback (most recent call last):
 TypeError: first_name must be a string
 
 >>> say_my_name("")
-My name is<space><empty><space><empty>
+My name is  
 
 >>> say_my_name("Baby")
-My name is Baby
+My name is Baby 
 
 >>> say_my_name(" ", "Riaño")
-My name is<space><space><space>Riaño
+My name is   Riaño
 
 >>> say_my_name(" ", " ")
-My name is<space><space><space><space>
+My name is    
 
 >>> say_my_name("", "")
-"My name is<space><empty><space><empty>"
+My name is  
 
 Test case #11: A test case with two new lines
 >>> say_my_name('\n', '\n')
@@ -49,4 +64,15 @@ My name is
 <BLANKLINE>
 <BLANKLINE>
 
+===========================
+Section Types
+===========================
+‘first_name’ must be a string:
+	>>> say_my_name(True, "Gomez")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
 
+'last_name’ must be a string:
+	>>> say_my_name("Mary", False)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
