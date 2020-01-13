@@ -22,15 +22,15 @@ with the message a must be an integer or b must be an integer:
 ### A test example of 0-add_integer.txt:
 
 a must be integers or float (Comment: name of test case)
-.>>> add_integer(None, 3) (Comment: line that the program exec)
-Traceback (most recent call last):
-TypeError: a must be an integer (Comment: corresponding error)
+    >>> add_integer(None, 3) (Comment: line that the program exec)
+    Traceback (most recent call last):
+    TypeError: a must be an integer (Comment: corresponding error)
 
 
 b must be integers or float
-.>>> add_integer(3, None)
-Traceback (most recent call last):
-TypeError: b must be an integer
+    >>> add_integer(3, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
 
 
 ### How does it work?
@@ -50,51 +50,50 @@ The failed would be message: ***Test Failed*** <number of tests> failures.
 
 Many cases of vars types.
 
-.>>> function1(3.0, 5) (Comment: float, int)
-8
+    >>> function1(3.0, 5) (Comment: float, int)
+    8
 
-.>>> function1(-4.4, -5) (Comments: negative float, negative int)
--9.4
+    >>> function1(-4.4, -5) (Comments: negative float, negative int)
+    -9.4
 
 Many cases of type return with int
 
-.>>> type(function1(5, 5))
-<class 'int'>
+    >>> type(function1(5, 5))
+    <class 'int'>
 
 ### ARGS
 
 When we must be careful of the arguments, for example: if the arguments are required in the parameters of a function.
 
-.>>> function1() (Comment: without parametrs)
-Traceback (most recent call last):
-
-TypeError: add_integer() missing 1 required positional argument: 'a'
+    >>> function1() (Comment: without parametrs)
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
 
 When the required arguments have no assigned value.
 
-.>>> function1(a, 123) (Comment: args empty)
-Traceback (most recent call last):
-NameError: name 'a' is not defined
+    >>> function1(a, 123) (Comment: args empty)
+    Traceback (most recent call last):
+    NameError: name 'a' is not defined
 
 
 ### I/O INPUTS
 
 When we must be careful of data entries, for example: avoiding overflow in functions.
 
-.>>> function1(5, 1e400) (Comment: max integer)
-Traceback (most recent call last):
-OverflowError
+    >>> function1(5, 1e400) (Comment: max integer)
+    Traceback (most recent call last):
+    OverflowError
 
 Infinity entries.
 
-.>>> function1(999e9999, 1) (Comment: type i floats)
-Traceback (most recent call last):
-OverflowError: cannot convert float infinity to integer
+    >>> function1(999e9999, 1) (Comment: type i floats)
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
 
 ### I/O OUTPUT
 
-.>>> function1(3.0, 5) (Comment: the output should return (same types))
-8
+    >>> function1(3.0, 5) (Comment: the output should return (same types))
+    8
 
 
 ### ERRORS
@@ -102,10 +101,10 @@ OverflowError: cannot convert float infinity to integer
 Error should print
 In python not catch errors from anothers. Classification not necessary
 
-Traceback (most recent call last):
-...
-TypeError: mssg
-NameError: mssg
+    Traceback (most recent call last):
+    ...
+    TypeError: mssg
+    NameError: mssg
     ValueError: mssg
     OverFlowError: mssg
 
