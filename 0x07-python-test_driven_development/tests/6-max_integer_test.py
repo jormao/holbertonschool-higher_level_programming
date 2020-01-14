@@ -23,6 +23,7 @@ class TestMaxInteger(unittest.TestCase):
         lista = []
         self.assertIsNone(max_integer(lista))
 
-    
+if __name__ == '__main__': 
+    unittest.main()    
 
 
