@@ -9,7 +9,7 @@ prototype: def text_indentation(text):
 
 
 def text_indentation(text):
-    """ function that prints a text with 2 new lines 
+    """ function that prints a text with 2 new lines
     after each of these characters: ., ? and :
 
     text must be a string, otherwise raise a TypeErrorexception with the
@@ -27,7 +27,7 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError('text must be a string')
     i = 0
-    new_str = ""    
+    new_str = ""
     while i < len(text):
         if text[i] == ' ' and i == 0:
             while text[i] == ' ':
@@ -41,5 +41,5 @@ def text_indentation(text):
                 i += 1
         if i < len(text) and text[i] not in '.?:':
             new_str += text[i]
-            i += 1       
-    print(new_str, end="")    
+            i += 1
+    print(new_str, end="")
