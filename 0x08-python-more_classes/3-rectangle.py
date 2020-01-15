@@ -56,7 +56,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         else:
-            return ( 2 * self.__width + 2 * self.__height)
+            return (2 * self.__width + 2 * self.__height)
 
     def __str__(self):
         new_str = ""
@@ -65,7 +65,7 @@ class Rectangle:
         else:
             for i in range(self.__height):
                 for j in range(self.__width):
-                	new_str += '#'
+                    new_str += '#'
                 if i in range(self.__height - 1):
                     new_str += '\n'
             return (new_str)

@@ -12,5 +12,5 @@ class Rectangle:
     the Class don't have args and Attributes
 
     """
-    
+
     pass
