@@ -8,6 +8,4 @@ def read_file(filename=""):
     """
     line_number = 0
     with open(filename, encoding='utf-8') as a_file:
-        for a_line in a_file:
-            line_number += 1
-            print('{}'.format(a_line.rstrip()))
+        print(a_file.read(), end="")
