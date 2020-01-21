@@ -1,4 +1,4 @@
-#!/usr/bin7python3
+#!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 """
 100-my_int.py: My integer
