@@ -66,4 +66,7 @@ class Base:
             return []
         with open(cls.__name__ + ".json", "r", encoding="utf-8") as a_file:
             instanceList = cls.from_json_string(a_file.read())
-            return [cls.create(**dic) for dic in instanceList]
+            inst_list = []
+            for dic in instanceList:
+                inst_list.append(cls.create(**dic))
+            return inst_list
