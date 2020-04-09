@@ -1,1 +1,1 @@
-loco
+O(log(n))
