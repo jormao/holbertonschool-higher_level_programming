@@ -11,8 +11,9 @@ if __name__ == "__main__":
     else:
         q = sys.argv[1]
     try:
-        r = requests.post("http://0.0.0.0:5000/search_user",
-                          data={"q": q}).json()
+        url = "http://0.0.0.0:5000/search_user"
+        data = {"q": q}
+        r = requests.post(url, data).json()
         if {"id", "name"} <= r.keys():
             print("[{}] {}".format(r['id'], r['name']))
         else:
