@@ -7,7 +7,7 @@ import requests
 import sys
 if __name__ == "__main__":
     url = "https://api.github.com/repos/{owner}/{repo}/commits"
-    uri = url.format(repo=sys.argv[2], owner=sys.argv[1])
+    uri = url.format(owner=sys.argv[2], repo=sys.argv[1])
     r = requests.get(uri).json()
     for _commit in r[:10]:
         author = _commit.get("commit").get("author").get("name")
