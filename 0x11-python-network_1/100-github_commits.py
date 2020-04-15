@@ -6,7 +6,9 @@ and uses the Github API to display your id
 import requests
 import sys
 if __name__ == "__main__":
-    r = requests.get('https://api.github.com/repos/rails/rails/commits').json()
+    url = "https://api.github.com/repos/{owner}/{repo}/commits"
+    uri = url.format(repo=sys.argv[2], owner=sys.argv[1])
+    r = requests.get(uri).json()
     for _commit in r[:10]:
         author = _commit.get("commit").get("author").get("name")
         sha = _commit.get("sha")
