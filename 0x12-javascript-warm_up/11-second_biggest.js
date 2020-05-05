@@ -7,7 +7,11 @@ if (process.argv.length <= 3) {
   for (let i = 2; i < process.argv.length; i++) {
     MyArray.push(parseInt(process.argv[i]));
   }
-  MyArray.sort();
+  MyArray.sort(mayor);
   MyArray.pop();
   console.log(MyArray[MyArray.length - 1]);
+}
+
+function mayor (elem1, elem2) {
+  return elem1 - elem2;
 }
