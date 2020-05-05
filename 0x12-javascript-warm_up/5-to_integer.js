@@ -6,5 +6,5 @@ MyNumber = parseInt(MyNumber, 10);
 if (isNaN(MyNumber)) {
   console.log('Not a number');
 } else {
-  console.log(MyNumber);
+  console.log("My number: " + MyNumber);
 }
